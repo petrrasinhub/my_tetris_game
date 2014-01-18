@@ -399,7 +399,9 @@ namespace MyTetris
         
         public static void DrawCol()
         {
-     
+
+            SolidBrush myBrush = new SolidBrush(Color.SkyBlue);
+
             for (int i = 0; i < _width; i++)
             {
                 for (int j = 0; j < _height; j++)
@@ -410,7 +412,8 @@ namespace MyTetris
 
                         using (Graphics graf = Graphics.FromImage(_bufferedData))
                         {
-                            var pen = new Pen(Color.Gold, 2);
+                            graf.FillRectangle(myBrush, ee);
+                            var pen = new Pen(Color.Gold, 1);
                             graf.DrawRectangle(pen, ee);
                         }
                     }
