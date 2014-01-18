@@ -1,0 +1,8 @@
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\bin\Debug\MyTetris.exe
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\bin\Debug\MyTetris.pdb
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\obj\Debug\MyTetris.Form1.resources
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\obj\Debug\MyTetris.Properties.Resources.resources
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\obj\Debug\MyTetris.csproj.GenerateResource.Cache
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\obj\Debug\MyTetris.exe
+C:\Users\Petr\Documents\Visual Studio 2008\Projects\MyTetris\MyTetris\obj\Debug\MyTetris.pdb
