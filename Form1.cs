@@ -37,8 +37,11 @@ namespace MyTetris
 
         public void MyGameOver()
         {
-            timer1.Enabled = false;
-            toolStripStatusLabel1.Text = toolStripStatusLabel1.Text + " ( Game over )"; 
+            if (timer1.Enabled)
+            {
+                timer1.Enabled = false;
+                toolStripStatusLabel1.Text = toolStripStatusLabel1.Text + " ( Game over )";
+            }
         }
 
 

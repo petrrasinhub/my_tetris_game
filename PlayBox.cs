@@ -350,11 +350,12 @@ namespace MyTetris
                 shiftLines = shiftLines + 1;        // one line was removed, recalc new offset 
             }
 
-            return (shiftLines * 10) * shiftLines;
+            return (shiftLines * 10) * shiftLines;  // return calc score
                         
         }
 
-        private static bool CheckColSide(CheckSide cs)
+            
+        private static bool CheckColSide(CheckSide cs)      // Check collision on right or left      
         {
             bool toRet = false;
             bool[,] tmp = _actualShape.GetMatrix();
@@ -385,7 +386,7 @@ namespace MyTetris
 
         public static void RotateShape()
         {
-            // exception rape
+            // exception rape - check if rotation is possible
             try
             {
                 _actualShape.DoRotate();
@@ -393,7 +394,7 @@ namespace MyTetris
             }
             catch
             {
-                _actualShape.RevertRotate();
+                _actualShape.RevertRotate();        // after rotation is shape out of bounds, revert rotation
             }
         }
         
@@ -460,7 +461,7 @@ namespace MyTetris
         
         public static void SaveGame(string fileName)
         {
-            List<string> allData = new List<string>();
+            List<string> allData = new List<string>();      // cannot serialize two-dimension array
 
             for(int i = 0; i < _height; i++)
             {
@@ -472,9 +473,10 @@ namespace MyTetris
                     oneLine[j] = _collisionBox[j, i].ToString();
                 }
 
-                allData.Add(String.Join(";", oneLine));
+                allData.Add(String.Join(";", oneLine));     // serialize colls
             }
 
+            // serialize rows
             string serializeArray = Convert.ToBase64String(Encoding.UTF8.GetBytes(String.Join(",", allData.ToArray())));
             
             string nl = Environment.NewLine;

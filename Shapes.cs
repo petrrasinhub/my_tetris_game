@@ -108,6 +108,7 @@ namespace MyTetris
 
     }
 
+    // This block define all game shapes
     class MyShape1 : BaseShape
     {
         public MyShape1(string color) : base(color)
@@ -158,12 +159,13 @@ namespace MyTetris
             this._matrix[1, 1] = true;
         }
     }
+    // End block of shapes
 
     // class for shapes generating
     public static class ShapeQueue
     {
         private static BaseShape _innerShape = null;
-        private static int _ident = -1;
+        private static int _ident = -1;                             // needed for reconstruction after game load
 
 
         public static BaseShape GetShape(int ident)
@@ -195,7 +197,7 @@ namespace MyTetris
             }
             return _innerShape;
         }
-        public static int GetIdent()
+        public static int GetIdent()                            // for easily game restore (no reflection needed)
         {
             return _ident;
         }
